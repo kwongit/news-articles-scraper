@@ -26,7 +26,7 @@ const sortArticles = require("./helpers/sorter");
 const HACKER_NEWS_HOMEPAGE_URL = "https://news.ycombinator.com";
 const DEFAULT_FILE_NAME = "top_10_articles";
 const DEFAULT_NUM_ARTICLES = 10;
-const LOG_FILE_NAME = "script_logs.txt";
+const LOG_FILE_NAME = "script_logs.log";
 
 // Define the available lists on Hacker News
 const AVAILABLE_LISTS = [
@@ -91,7 +91,7 @@ if (argv.sort && !argv.order) {
   // Log the beginning of script execution with UID
   const sessionUID = uuidv4();
   await logger(
-    `Start of script execution.\nSession UID: ${sessionUID}`,
+    `Start of script execution.\n[Session UID]: ${sessionUID}`,
     logFilePath
   );
 
