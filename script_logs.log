@@ -1,0 +1,36 @@
+[2024-05-23T20:00:54.200Z] Start of script execution.
+[Session UID]: 9f92f3b5-a861-4e3f-812e-e36b5f8497dc
+[2024-05-23T20:00:59.249Z] Start of script execution.
+[Session UID]: 98799e1d-bcc2-4625-90fc-ef0582c73139
+[2024-05-23T20:01:51.853Z] Start of script execution.
+[Session UID]: ee313d74-4d92-4e38-b434-97c2f8f88e06
+[2024-05-23T20:02:00.603Z] Successfully navigated to: https://news.ycombinator.com
+[2024-05-23T20:02:00.640Z] [1/10] Article retrieved: The Space Quest II Master Disk Blunder
+[2024-05-23T20:02:00.646Z] [2/10] Article retrieved: Show HN: Porter Cloud – PaaS with an eject button
+[2024-05-23T20:02:00.651Z] [3/10] Article retrieved: Cement recycling method could help solve one of the big climate challenges
+[2024-05-23T20:02:00.658Z] [4/10] Article retrieved: Crows "count" the number of self-generated vocalizations
+[2024-05-23T20:02:00.665Z] [5/10] Article retrieved: Tom Waits vs. Frito-Lay, Inc (2003)
+[2024-05-23T20:02:00.670Z] [6/10] Article retrieved: Launch HN: Metriport (YC S22) – Open-source API for healthcare data exchange
+[2024-05-23T20:02:00.675Z] [7/10] Article retrieved: BB(3, 4) > Ack(14)
+[2024-05-23T20:02:00.680Z] [8/10] Article retrieved: Fossil fuels could have been left in the dust 25 years ago
+[2024-05-23T20:02:00.685Z] [9/10] Article retrieved: Why did Tom Lehrer swap fame for obscurity?
+[2024-05-23T20:02:00.691Z] [10/10] Article retrieved: US Army researched the health effects of radioactivity in St Louis 1945-1970
+[2024-05-23T20:02:00.731Z] Top 10 articles saved to: /Users/kevin/Desktop/qa_wolf_take_home/top_10_articles.csv
+[2024-05-23T20:02:00.732Z] End of script execution.
+
+[2024-05-23T20:02:20.551Z] Start of script execution.
+[Session UID]: fef63380-22c7-4455-9edb-5bcd58439031
+[2024-05-23T20:02:23.817Z] Successfully navigated to: https://news.ycombinator.com
+[2024-05-23T20:02:23.849Z] [1/10] Article retrieved: The Space Quest II Master Disk Blunder
+[2024-05-23T20:02:23.856Z] [2/10] Article retrieved: Show HN: Porter Cloud – PaaS with an eject button
+[2024-05-23T20:02:23.861Z] [3/10] Article retrieved: Cement recycling method could help solve one of the big climate challenges
+[2024-05-23T20:02:23.866Z] [4/10] Article retrieved: Crows "count" the number of self-generated vocalizations
+[2024-05-23T20:02:23.872Z] [5/10] Article retrieved: Tom Waits vs. Frito-Lay, Inc (2003)
+[2024-05-23T20:02:23.877Z] [6/10] Article retrieved: Launch HN: Metriport (YC S22) – Open-source API for healthcare data exchange
+[2024-05-23T20:02:23.881Z] [7/10] Article retrieved: BB(3, 4) > Ack(14)
+[2024-05-23T20:02:23.885Z] [8/10] Article retrieved: Fossil fuels could have been left in the dust 25 years ago
+[2024-05-23T20:02:23.891Z] [9/10] Article retrieved: Why did Tom Lehrer swap fame for obscurity?
+[2024-05-23T20:02:23.897Z] [10/10] Article retrieved: US Army researched the health effects of radioactivity in St Louis 1945-1970
+[2024-05-23T20:02:23.941Z] Top 10 articles saved to: /Users/kevin/Desktop/qa_wolf_take_home/top_10_articles.csv
+[2024-05-23T20:02:23.941Z] End of script execution.
+
