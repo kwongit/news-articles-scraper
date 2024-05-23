@@ -1,0 +1,18 @@
+[2024-05-23T04:34:50.727Z] Start of script execution.
+Session UID: 1431e5a8-073a-4dc7-bfee-b6968bdb7f06
+[2024-05-23T04:34:55.362Z] Sorting articles by title in asc order...
+[2024-05-23T04:34:55.363Z] Filtering articles with keywords: github
+[2024-05-23T04:34:56.015Z] Successfully navigated to: https://news.ycombinator.com
+[2024-05-23T04:34:56.049Z] [1/10] Article skipped due to keyword filter: Leaked OpenAI documents reveal aggressive tactics toward former employees
+[2024-05-23T04:34:56.055Z] [2/10] Article skipped due to keyword filter: Show HN: Route your prompts to the best LLM
+[2024-05-23T04:34:56.061Z] [3/10] Article skipped due to keyword filter: Number 16 (spider)
+[2024-05-23T04:34:56.067Z] [4/10] Article skipped due to keyword filter: Pluckable Strings
+[2024-05-23T04:34:56.072Z] [5/10] Article retrieved: Show HN: Neosync – Open-Source Data Anonymization for Postgres and MySQL
+[2024-05-23T04:34:56.078Z] [6/10] Article skipped due to keyword filter: Try Clojure
+[2024-05-23T04:34:56.082Z] [7/10] Article skipped due to keyword filter: Why Are Sloths So Slow?
+[2024-05-23T04:34:56.086Z] [8/10] Article skipped due to keyword filter: Lessons learned from studying 4k YC companies
+[2024-05-23T04:34:56.090Z] [9/10] Article skipped due to keyword filter: Faking William Morris, Generative Forgery, and the Erosion of Art History
+[2024-05-23T04:34:56.098Z] [10/10] Article retrieved: Emacs Easydraw – drawing tool inside Emacs
+[2024-05-23T04:34:56.140Z] Top 10 articles saved to: /Users/kevin/Desktop/qa_wolf_take_home/top_10_articles.csv
+[2024-05-23T04:34:56.140Z] End of script execution.
+
