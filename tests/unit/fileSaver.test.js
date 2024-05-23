@@ -5,11 +5,12 @@ const { saveAsJSON } = require("../../helpers/fileSaver");
 const { saveAsExcel } = require("../../helpers/fileSaver");
 
 describe("fileSaver", () => {
+  const articles = [
+    { title: "Article 1", url: "http://example.com/article1" },
+    { title: "Article 2", url: "http://example.com/article2" },
+  ];
+
   it("should save articles as CSV", () => {
-    const articles = [
-      { title: "Article 1", url: "http://example.com/article1" },
-      { title: "Article 2", url: "http://example.com/article2" },
-    ];
     const filePath = "test_articles.csv";
 
     saveAsCSV(articles, filePath);
@@ -23,10 +24,6 @@ describe("fileSaver", () => {
   });
 
   it("should save articles as JSON", () => {
-    const articles = [
-      { title: "Article 1", url: "http://example.com/article1" },
-      { title: "Article 2", url: "http://example.com/article2" },
-    ];
     const filePath = "test_articles.json";
 
     saveAsJSON(articles, filePath);
@@ -40,10 +37,6 @@ describe("fileSaver", () => {
   });
 
   it("should save articles as Excel", () => {
-    const articles = [
-      { title: "Article 1", url: "http://example.com/article1" },
-      { title: "Article 2", url: "http://example.com/article2" },
-    ];
     const filePath = "test_articles.xlsx";
 
     saveAsExcel(articles, filePath);
