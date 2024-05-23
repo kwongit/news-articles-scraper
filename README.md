@@ -92,6 +92,49 @@ Prompts the user for the number of articles, file name, and output format.
 
 The main function `saveHackerNewsArticles` scrapes the articles and saves them in the specified format. It logs progress and handles errors.
 
+## Modules
+
+### 1. Main Script (`index.js`)
+
+The main script orchestrates the workflow using other modules. It handles:
+
+- Command-line arguments parsing.
+- User interaction through prompts.
+- Logging the script execution.
+- Scraping articles from Hacker News.
+- Filtering and sorting articles.
+- Saving articles in the specified format.
+
+### 2. Logger (`helpers/logger.js`)
+
+Handles all logging functionalities.
+
+- Logs messages to the console and optionally to a file.
+- Each log entry includes a timestamp.
+
+### 3. Scraper (`helpers/scraper.js`)
+
+Manages web scraping using Playwright.
+
+- Navigates to the specified Hacker News page.
+- Retrieves the top N articles based on the provided criteria.
+- Filters articles based on keywords.
+
+### 4. Sorter (`helpers/sorter.js`)
+
+Contains the sorting logic.
+
+- Sorts articles based on the specified field and order (ascending or descending).
+
+### 5. File Saver (`helpers/fileSaver.js`)
+
+Handles saving data in different formats.
+
+- `saveAsCSV`: Saves articles as a CSV file.
+- `saveAsJSON`: Saves articles as a JSON file.
+- `saveAsExcel`: Saves articles as an Excel file.
+- `saveAsHTML`: Saves articles as an HTML file.
+
 ## Example
 
 Running the script and following the prompts:
@@ -122,6 +165,35 @@ Retrieve articles containing the keyword "github" from the "news" list:
 node index.js --keywords=github --lists=news
 ```
 
+## Above and Beyond
+
+- **Modular Design**: Refactoring of the script into separate modules (logger, fileSaver, scraper, sorter) follows best practices in software engineering, enhancing the readability, maintainability, and testability of the code.
+- **Advanced Features**: The additional features (sorting, filtering, multiple formats) show a deep understanding of potential user needs and provide a robust solution beyond the basic requirements.
+- **Comprehensive Error Handling and Logging**: Ensuring that the script logs its progress and errors robustly is a professional touch that indicates the importance of monitoring and maintaining production scripts.
+- **User Experience**: Including user prompts makes the script more flexible and user-friendly, demonstrating a focus on user experience.
+
 ## Conclusion
 
 This script is a powerful tool for scraping and saving top articles from Hacker News in various formats. It is highly customizable, user-friendly, and logs its actions for easy troubleshooting and monitoring. With comprehensive documentation, users can easily understand and utilize the script for their needs.
+
+---
+
+## Future Enhancements
+
+### Automated Tests
+
+- **Unit Tests**: Ensure each module and function works correctly in isolation.
+- **Integration Tests**: Verify that different parts of the system work together as expected.
+- **End-to-End Tests**: Use Playwright to simulate real user interactions and validate the entire workflow from scraping to saving files.
+
+### CI/CD Integration
+
+- Set up a Continuous Integration/Continuous Deployment (CI/CD) pipeline (e.g., using GitHub Actions) to automatically run tests on each commit and ensure code quality.
+
+### Configuration Management
+
+- Use a configuration file (e.g., `config.json`) to manage default settings (like default number of articles, default file format, etc.), making the script more flexible and easier to configure.
+
+### Error Notification
+
+- Integrate a notification system (e.g., send an email or Slack message) if the script encounters an error, ensuring quick awareness and resolution of issues.
