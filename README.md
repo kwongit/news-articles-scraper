@@ -176,7 +176,7 @@ node index.js --keywords=github --lists=news
 
 This script is a powerful tool for scraping and saving top articles from Hacker News in various formats. It is highly customizable, user-friendly, and logs its actions for easy troubleshooting and monitoring. With comprehensive documentation, users can easily understand and utilize the script for their needs.
 
----
+<font color="gray">
 
 ## Future Enhancements
 
@@ -197,3 +197,5 @@ This script is a powerful tool for scraping and saving top articles from Hacker 
 ### Error Notification
 
 - Integrate a notification system (e.g., send an email or Slack message) if the script encounters an error, ensuring quick awareness and resolution of issues.
+
+</font>
