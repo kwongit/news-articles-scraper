@@ -1,11 +1,11 @@
 # Hacker News Articles Scraper
 
-This script allows you to scrape the top articles from Hacker News and save them in various formats such as CSV, JSON, Excel, or HTML. It includes features like data validation, progress indicators, logging, user interaction, and customizable output formats.
+This script allows you to scrape the top articles from Hacker News and save them in various formats such as CSV, JSON, or Excel. It includes features like data validation, progress indicators, logging, user interaction, and customizable output formats.
 
 ## Features
 
 - **Scrapes top articles from Hacker News**
-- **Supports multiple output formats: CSV, JSON, Excel, HTML**
+- **Supports multiple output formats: CSV, JSON, Excel**
 - **Logs progress and errors**
 - **Validates extracted data**
 - **Interactive user prompts for configuration**
@@ -49,7 +49,7 @@ npm install playwright json2csv prompt-sync xlsx yargs uuid
 
    - Enter the number of articles to retrieve (default is 10).
    - Enter the file name (default is `top_10_articles`).
-   - Enter the output format (`csv`, `json`, `xlsx`, `html`; default is `csv`).
+   - Enter the output format (`csv`, `json`, `xlsx`; default is `csv`).
    - Optionally, provide additional command-line options for sorting, ordering, and keyword filtering.
 
 ## Command-line Options
@@ -82,7 +82,6 @@ Ensures that the extracted titles and URLs are not empty.
 - **CSV**: Uses `json2csv` to convert JSON data to CSV.
 - **JSON**: Writes JSON data directly to a file.
 - **Excel**: Uses `xlsx` to create an Excel file.
-- **HTML**: Generates a simple HTML file with a list of articles.
 
 ### User Interaction
 
@@ -133,7 +132,6 @@ Handles saving data in different formats.
 - `saveAsCSV`: Saves articles as a CSV file.
 - `saveAsJSON`: Saves articles as a JSON file.
 - `saveAsExcel`: Saves articles as an Excel file.
-- `saveAsHTML`: Saves articles as an HTML file.
 
 ## Example
 
@@ -144,7 +142,7 @@ node index.js
 
 Enter the number of articles to retrieve (default: 10): 5
 Enter the file name (default: top_10_articles): top_articles
-Enter the output format (csv, json, xlsx, html) (default: csv): json
+Enter the output format (csv, json, xlsx) (default: csv): json
 ```
 
 The script will scrape the top 5 articles from Hacker News and save them in a file named `top_articles.json`.

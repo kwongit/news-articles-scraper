@@ -33,31 +33,4 @@ function saveAsExcel(articles, filePath) {
   xlsx.writeFile(workbook, filePath);
 }
 
-/**
- * Constructs an HTML representation of the articles and saves it to a file.
- * @param {Array} articles - The array of articles to be saved.
- * @param {string} filePath - The file path where the HTML file will be saved.
- */
-function saveAsHTML(articles, filePath) {
-  const htmlContent = `
-    <html>
-      <head>
-        <title>Top Articles</title>
-      </head>
-      <body>
-        <h1>Top Articles</h1>
-        <ul>
-          ${articles
-            .map(
-              (article) =>
-                `<li><a href="${article.url}" target="_blank">${article.title}</a></li>`
-            )
-            .join("")}
-        </ul>
-      </body>
-    </html>
-  `;
-  fs.writeFileSync(filePath, htmlContent);
-}
-
-module.exports = { saveAsCSV, saveAsJSON, saveAsExcel, saveAsHTML };
+module.exports = { saveAsCSV, saveAsJSON, saveAsExcel };

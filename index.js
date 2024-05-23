@@ -14,12 +14,7 @@ const yargs = require("yargs");
 const { v4: uuidv4 } = require("uuid");
 
 const logger = require("./helpers/logger");
-const {
-  saveAsCSV,
-  saveAsJSON,
-  saveAsExcel,
-  saveAsHTML,
-} = require("./helpers/fileSaver");
+const { saveAsCSV, saveAsJSON, saveAsExcel } = require("./helpers/fileSaver");
 const scrapeArticles = require("./helpers/scraper");
 const sortArticles = require("./helpers/sorter");
 
@@ -103,7 +98,7 @@ if (argv.sort && !argv.order) {
   const fileNameInput = `Enter the CSV file name (default: ${DEFAULT_FILE_NAME}): `;
   const fileName = prompt(fileNameInput) || DEFAULT_FILE_NAME;
 
-  const outputFormatInput = `Enter the output format (csv, json, xlsx, html) (default: csv): `;
+  const outputFormatInput = `Enter the output format (csv, json, xlsx) (default: csv): `;
   const outputFormat = prompt(outputFormatInput) || "csv";
 
   // Check if additional sorting options are provided
@@ -155,9 +150,6 @@ if (argv.sort && !argv.order) {
         break;
       case "xlsx":
         saveAsExcel(articles, filePath);
-        break;
-      case "html":
-        saveAsHTML(articles, filePath);
         break;
       default:
         // Throw an error if the output format is not supported
