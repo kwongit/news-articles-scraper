@@ -1,5 +1,5 @@
-const { chromium } = require("playwright");
 const logger = require("./logger");
+const { chromium } = require("playwright");
 
 /**
  * Scrapes articles from the specified Hacker News list URL.
