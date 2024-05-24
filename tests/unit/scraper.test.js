@@ -1,8 +1,9 @@
 const scrapeArticles = require("../../helpers/scraper");
+const logger = require("../../helpers/logger");
 const { chromium } = require("playwright");
 
-// Mock logger module
-jest.mock("../../helpers/logger", () => jest.fn());
+// Mock logger module;
+jest.mock("../../helpers/logger");
 
 describe("scrapeArticles", () => {
   // Define test data
@@ -13,7 +14,7 @@ describe("scrapeArticles", () => {
   const keywordsEmpty = [];
   const logFile = "test_logs.log";
 
-  // Mock playwright functions
+  // Mock playwright functions before each test
   beforeEach(() => {
     // Mock chromium launch function
     chromium.launch = jest.fn(() => ({
@@ -47,11 +48,16 @@ describe("scrapeArticles", () => {
     }));
   });
 
-  it("should scrape articles matching keywords", async () => {
+  it("should log successful navigation and scrape articles matching keywords", async () => {
     const articles = await scrapeArticles(
       listUrl,
       numArticles,
       keywordsMatch,
+      logFile
+    );
+
+    expect(logger).toHaveBeenCalledWith(
+      expect.stringContaining("Successfully navigated to"),
       logFile
     );
 
@@ -70,6 +76,11 @@ describe("scrapeArticles", () => {
       logFile
     );
 
+    expect(logger).toHaveBeenCalledWith(
+      expect.stringContaining("Successfully navigated to"),
+      logFile
+    );
+
     expect(articles).toEqual([]);
   });
 
@@ -78,6 +89,11 @@ describe("scrapeArticles", () => {
       listUrl,
       numArticles,
       keywordsEmpty,
+      logFile
+    );
+
+    expect(logger).toHaveBeenCalledWith(
+      expect.stringContaining("Successfully navigated to"),
       logFile
     );
 

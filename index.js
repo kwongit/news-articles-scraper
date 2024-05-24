@@ -169,6 +169,5 @@ if (argv.sort && !argv.order) {
 })();
 
 // TODO:
-// write unit tests
 // complete assignment 2 - video recording
 // convert to TS
