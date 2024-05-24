@@ -234,19 +234,11 @@ node index.js --keywords=github --lists=news
 
 This script is a powerful tool for scraping and saving top articles from Hacker News in various formats. It is highly customizable, user-friendly, and logs its actions for easy troubleshooting and monitoring. With comprehensive documentation, users can easily understand and utilize the script for their needs.
 
-<font color="gray">
-
 ## Future Enhancements
-
-### Automated Tests
-
-- **Unit Tests**: Ensure each module and function works correctly in isolation.
-- **Integration Tests**: Verify that different parts of the system work together as expected.
-- **End-to-End Tests**: Use Playwright to simulate real user interactions and validate the entire workflow from scraping to saving files.
 
 ### CI/CD Integration
 
-- Set up a Continuous Integration/Continuous Deployment (CI/CD) pipeline (e.g., using GitHub Actions) to automatically run tests on each commit and ensure code quality.
+- Set up a CI/CD pipeline to automatically run tests on each commit and ensure code quality.
 
 ### Configuration Management
 
@@ -254,6 +246,4 @@ This script is a powerful tool for scraping and saving top articles from Hacker 
 
 ### Error Notification
 
-- Integrate a notification system (e.g., send an email or Slack message) if the script encounters an error, ensuring quick awareness and resolution of issues.
-
-</font>
+- Integrate a notification system (e.g., send an email) if the script encounters an error, ensuring quick awareness and resolution of issues.

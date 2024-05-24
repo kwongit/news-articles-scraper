@@ -165,5 +165,4 @@ if (argv.sort && !argv.order) {
 })();
 
 // TODO:
-// complete assignment 2 - video recording
 // convert to TS
