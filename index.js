@@ -165,6 +165,5 @@ if (argv.sort && !argv.order) {
 })();
 
 // TODO:
-// update docs with tests
 // complete assignment 2 - video recording
 // convert to TS

@@ -170,6 +170,66 @@ node index.js --keywords=github --lists=news
 - **Comprehensive Error Handling and Logging**: Ensuring that the script logs its progress and errors robustly is a professional touch that indicates the importance of monitoring and maintaining production scripts.
 - **User Experience**: Including user prompts makes the script more flexible and user-friendly, demonstrating a focus on user experience.
 
+## Test Overview
+
+### Unit Tests
+
+#### File Saver (`tests/unit/fileSaver.test.js`)
+
+- Tests the functionality of saving articles in different formats: CSV, JSON, and Excel.
+- Verifies that the saved files contain the correct data and format.
+
+#### Logger (`tests/unit/logger.test.js`)
+
+- Tests the logging functionality, ensuring messages are logged to the console and/or a file correctly.
+- Handles scenarios like successful logging, error handling during logging, and logging without a file path.
+
+#### Scraper (`tests/unit/scraper.test.js`)
+
+- Tests the web scraping functionality, including navigation, article extraction, and keyword matching.
+- Covers scenarios like successful navigation, scraping articles based on keywords, handling no matching articles, and error handling during scraping.
+
+#### Sorter (`tests/unit/sorter.test.js`)
+
+- Tests the sorting functionality, ensuring articles are sorted correctly based on specified criteria (field and order).
+
+### End-to-End Tests
+
+#### End-to-End (`tests/e2e/endToEnd.test.js`)
+
+- Conducts end-to-end testing by scraping articles from Hacker News and saving them to a CSV file.
+- Verifies the correctness of saved data and file content, handling scenarios like keyword matching, no matching articles, and error handling during scraping.
+
+#### Index (`tests/e2e/index.test.js`)
+
+- Tests the command-line parsing and user input prompting functionality.
+- Ensures correct parsing of command-line arguments and handling of user input for configuration prompts.
+
+## How to Run Tests
+
+1. **Run Unit Tests:**
+
+   ```bash
+   npm run test:unit
+   ```
+
+2. **Run End-to-End Tests:**
+
+   ```bash
+   npm run test:e2e
+   ```
+
+3. **Run All Tests:**
+
+   ```bash
+   npm test
+   ```
+
+### Additional Notes
+
+- These tests were written using the Jest testing framework.
+- You can view the detailed test files in the `tests/unit` and `tests/e2e` directories.
+
 ## Conclusion
 
 This script is a powerful tool for scraping and saving top articles from Hacker News in various formats. It is highly customizable, user-friendly, and logs its actions for easy troubleshooting and monitoring. With comprehensive documentation, users can easily understand and utilize the script for their needs.
