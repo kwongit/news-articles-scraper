@@ -1,9 +1,7 @@
 /**
  * Orchestrates the workflow of retrieving, sorting, and saving Hacker News articles.
  *
- * This script retrieves Hacker News articles based on user input or default configurations,
- * sorts them if sorting options are provided, saves them in the specified output format,
- * and logs the execution process.
+ * This script retrieves Hacker News articles based on user input or default configurations, sorts them if sorting options are provided, saves them in the specified output format, and logs the execution process.
  *
  * @module MainScript
  */
@@ -44,7 +42,6 @@ const AVAILABLE_LISTS = [
   "launches",
 ];
 
-// FEATURE: COMMAND-LINE ARGUMENTS FOR SORTING & ORDERING
 const argv = yargs
   .option("sort", {
     describe: "Sort articles by specified field (title or url)",
@@ -90,12 +87,11 @@ if (argv.sort && !argv.order) {
     logFilePath
   );
 
-  // FEATURE: USER INTERACTION
   const numArticlesInput = `Enter the number of articles to retrieve (default: ${DEFAULT_NUM_ARTICLES}): `;
   const numArticles =
     parseInt(prompt(numArticlesInput)) || DEFAULT_NUM_ARTICLES;
 
-  const fileNameInput = `Enter the CSV file name (default: ${DEFAULT_FILE_NAME}): `;
+  const fileNameInput = `Enter the file name (default: ${DEFAULT_FILE_NAME}): `;
   const fileName = prompt(fileNameInput) || DEFAULT_FILE_NAME;
 
   const outputFormatInput = `Enter the output format (csv, json, xlsx) (default: csv): `;
@@ -169,5 +165,6 @@ if (argv.sort && !argv.order) {
 })();
 
 // TODO:
+// update docs with tests
 // complete assignment 2 - video recording
 // convert to TS
