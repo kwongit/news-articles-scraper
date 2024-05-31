@@ -21,7 +21,7 @@ const page = await context.newPage();
 await page.goto("https://news.ycombinator.com/");
 
 // locate article elements
-const articleElements = page.locator(`td:nth-of-type(3).title`);
+const articleElements = page.locator(`.titleline > a`);
 
 // get article elements count
 const articleElementsCount = await articleElements.count();
@@ -38,12 +38,10 @@ const articles = [];
 for (let i = 0; i < 10; i++) {
   // index into first article element
   const article = articleElements.nth(i);
-  // locate article element title tag
-  const titleElement = article.locator(`.titleline > a`);
   // get inner text of article element title tag
-  const title = await titleElement.innerText();
+  const title = await article.innerText();
   // get href of article element title tag
-  const url = await titleElement.getAttribute("href");
+  const url = await article.getAttribute("href");
 
   // push {title, url} object to articles list
   articles.push({ title, url });
