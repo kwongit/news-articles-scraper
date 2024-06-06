@@ -1,0 +1,38 @@
+[2024-06-01T14:18:19.442Z] Start of script execution.
+[Session UID]: 4abfe0c2-339e-43d5-841d-67e73adc8512
+[2024-06-01T14:18:23.567Z] An error occured: Error: browserType.launch: Executable doesn't exist at /Users/kevin/Library/Caches/ms-playwright/chromium-1084/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+[2024-06-01T14:18:23.568Z] An error occurred: Error: browserType.launch: Executable doesn't exist at /Users/kevin/Library/Caches/ms-playwright/chromium-1084/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+[2024-06-01T14:18:23.569Z] End of script execution.
+
+[2024-06-01T14:19:33.887Z] Start of script execution.
+[Session UID]: bbf1c7af-7c96-48ba-a3e3-bb25faa6b92b
+[2024-06-01T14:19:40.613Z] Successfully navigated to: https://news.ycombinator.com
+[2024-06-01T14:19:40.648Z] [1/10] Article retrieved: CERN Root
+[2024-06-01T14:19:40.654Z] [2/10] Article retrieved: Lessons learned from 6 months of operating a tiny news archive
+[2024-06-01T14:19:40.660Z] [3/10] Article retrieved: UI elements with a hand-drawn, sketchy look
+[2024-06-01T14:19:40.667Z] [4/10] Article retrieved: Napster Sparked a File-Sharing Revolution 25 Years Ago
+[2024-06-01T14:19:40.673Z] [5/10] Article retrieved: Arthur Whitney releases an open-source K with MIT license
+[2024-06-01T14:19:40.678Z] [6/10] Article retrieved: HuggingFace hacked – Space secrets leak disclosure
+[2024-06-01T14:19:40.682Z] [7/10] Article retrieved: Show HN: I built a Backend so Simple that it Fits in 1 YAML File
+[2024-06-01T14:19:40.687Z] [8/10] Article retrieved: Show HN: Every mountain, building and tree shadow mapped for any date and time
+[2024-06-01T14:19:40.691Z] [9/10] Article retrieved: Snowflake breach: Hacker confirms access through infostealer infection
+[2024-06-01T14:19:40.697Z] [10/10] Article retrieved: Ticketmaster confirms data hack which could affect 560M globally
+[2024-06-01T14:19:40.727Z] Top 10 articles saved to: /Users/kevin/Desktop/Interview Prep/qa_wolf_take_home/top_10_articles.csv
+[2024-06-01T14:19:40.727Z] End of script execution.
+

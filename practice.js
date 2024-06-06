@@ -1,61 +1,32 @@
-const { context } = await launch({ headless: false });
-const page = await context.newPage();
+const { chromium } = require("playwright");
 
-// launch browser and go to Netflix
-// await page.goto('https://netflix.com');
+(async () => {
+  // Launch a browser instance
+  const browser = await chromium.launch({ headless: false }); // Set headless: true if you don't want a browser window to open
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-// // go to the sign in page
-// await page.locator(`#signIn`).click();
+  // Navigate to the login page
+  await page.goto("https://sheets.lido.app/login");
 
-// // fill in invalid crede
-// await page.locator(`[name="userLoginId"]`).fill(`wrongemail@email.com`);
-// await page.locator(`[name="password"]`).fill(`password`);
+  // Fill in the login form with invalid credentials
+  await page.fill('input[name="email"]', "invalid@example.com"); // Adjust the selector as needed
+  await page.fill('input[name="password"]', "invalidpassword"); // Adjust the selector as needed
 
-// // try to sign in
-// await page.locator(`[type="submit"]`).click();
+  // Submit the form
+  await page.click('button[type="submit"]'); // Adjust the selector as needed
 
-// // assert that we cannot log in
-// await expect(page.locator('text=Incorrect password for wrongemail@email.com')).toBeVisible();
+  // Close the browser
+  // await browser.close();
+})();
 
-// go to Hacker News
-await page.goto("https://news.ycombinator.com/");
+// // assert alert window pops up
+// await expect(page.locator(`[role="alert"]`)).toBeVisible();
 
-// locate article elements
-const articleElements = page.locator(`.titleline > a`);
+// // assert error text message
+// await expect(
+//   page.locator(`:text("Email or password incorrect.")`)
+// ).toHaveText(INVALID_CREDENTIAL_ERROR_MESSAGE);
 
-// get article elements count
-const articleElementsCount = await articleElements.count();
-// console.log('article elements: ', articleElements);
-// console.log('article elements count: ', articleElementsCount);
-
-// assert article elements count
-expect(articleElementsCount).toBe(30);
-
-// create empty articles list
-const articles = [];
-
-// loop through the first 10 elements of article elements
-for (let i = 0; i < 10; i++) {
-  // index into first article element
-  const article = articleElements.nth(i);
-  // get inner text of article element title tag
-  const title = await article.innerText();
-  // get href of article element title tag
-  const url = await article.getAttribute("href");
-
-  // push {title, url} object to articles list
-  articles.push({ title, url });
-}
-
-// console.log('articles: ', articles);
-// console.log('');
-
-// loop through articles list and console log each article
-articles.forEach((article) => {
-  console.log("article: ", article);
-});
-
-// console.log('articles length: ', articles.length);
-
-// assert articles list length
-expect(articles.length).toBe(10);
+// // assert no redirect
+// await expect(page).toHaveURL(initialUrl);
